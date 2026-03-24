@@ -25,7 +25,6 @@
 
 ```
 CycleGAN-Style-Transfer/
-├── checkpoints/             # 模型检查点目录
 ├── data/                    # 数据集目录
 │   ├── download_cyclegan_dataset.sh  # CycleGAN数据集下载脚本
 │   └── download_pix2pix_dataset.sh   # Pix2Pix数据集下载脚本
@@ -35,23 +34,35 @@ CycleGAN-Style-Transfer/
 │   │   │   ├── base.yaml    # 基础配置
 │   │   │   ├── test.yaml    # 测试配置
 │   │   │   └── train.yaml   # 训练配置
+│   │   ├── models/          # 模型定义
+│   │   │   ├── ahs_models.py    # 改进的模型定义
+│   │   │   ├── cbam_models.py   # CBAM注意力模型
+│   │   │   ├── hybrid_upsample_models.py  # 混合上采样模型
+│   │   │   ├── models.py        # 基础模型定义
+│   │   │   └── sn_models.py     # 谱归一化模型
+│   │   ├── module/          # 模块实现
+│   │   │   ├── CBAM.py          # CBAM注意力模块
+│   │   │   └── HybridUpsampleBlock.py  # 混合上采样模块
 │   │   ├── utils/           # 工具函数
 │   │   │   ├── __init__.py
-│   │   │   ├── metrics.py   # 评估指标
 │   │   │   └── utils.py     # 通用工具
-│   │   ├── module/          # 模块实现
-│   │   │   ├── CBAM.py          # CBAM.py          # CBAM注意力模块
-│   │   │   ├── HybridUpsampleBlock.py  # 混合上采样模块
+│   │   ├── __pycache__/     # Python缓存目录
 │   │   ├── __init__.py
-│   │   ├── ahs_models.py    # 改进的模型定义
+│   │   ├── constants.py     # 常量定义
 │   │   ├── cyclegan.py      # 训练主脚本
 │   │   ├── datasets.py      # 数据集加载
-│   │   ├── models.py        # 基础模型定义
-│   │   ├── sn_models.py     # 谱归一化模型
 │   │   └── test_cyclegan.py # 测试脚本
 │   ├── discogan/            # DiscoGAN实现
 │   └── dualgan/             # DualGAN实现
 ├── output/                  # 输出目录（生成图像）
+│   ├── cbam/                # CBAM模型生成结果
+│   │   └── monet2photo/     # Monet到照片转换结果
+│   └── spectral_normalization/  # 谱归一化模型生成结果
+│       └── vangogh2photo/   # Van Gogh到照片转换结果
+├── utils/                   # 项目通用工具
+│   ├── metrics.py           # 评估指标
+│   └── utils.py             # 通用工具函数
+├── .gitignore               # Git忽略文件
 └── README.md                # 项目说明文档
 ```
 
@@ -59,7 +70,7 @@ CycleGAN-Style-Transfer/
 
 1. **克隆项目**
    ```bash
-   git clone https://github.com/yourusername/CycleGAN-Style-Transfer.git
+   git clone https://github.com/Lzh-12/CycleGAN-Style-Transfer.git
    cd CycleGAN-Style-Transfer
    ```
 
@@ -146,7 +157,6 @@ tensorboard --logdir experiments/horse2zebra/baseline/logs
 
 - 作者: Lzh
 - 邮箱: li20922024@163.com
-- 项目地址: https://github.com/Lzh-12/CycleGAN-Style-Transfer
 
 ---
 
