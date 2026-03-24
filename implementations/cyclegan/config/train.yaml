@@ -35,5 +35,5 @@ checkpoint_interval: 20      # 每隔多少 epoch 保存一次模型（-1 表示
 # 路径（可选，也可硬编码）
 # ======================
 data_root: "./data"
-image_save_dir: "images"
-model_save_dir: "saved_models"
+image_save_dir: "output"
+model_save_dir: "checkpoints"

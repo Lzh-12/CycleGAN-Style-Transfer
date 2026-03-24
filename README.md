@@ -25,6 +25,9 @@
 
 ```
 CycleGAN-Style-Transfer/
+|—— checkpoints/            # 模型检查点目录
+│   ├── cyclegan/            # CycleGAN模型检查点
+│   ├── cyclegan_cbam/       # CycleGAN+CBAM模型检查点
 ├── data/                    # 数据集目录
 │   ├── download_cyclegan_dataset.sh  # CycleGAN数据集下载脚本
 │   └── download_pix2pix_dataset.sh   # Pix2Pix数据集下载脚本
