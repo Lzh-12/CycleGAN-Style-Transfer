@@ -1,0 +1,15 @@
+# 测试配置文件
+# 继承自基础配置文件
+
+_base_: base.yaml
+
+# 测试特定配置
+batch_size: 1
+n_cpu: 8
+cuda: true
+
+# 输出目录
+output_dir: output
+
+# 检查点配置
+checkpoint_epoch: 200

@@ -1,0 +1,16 @@
+# CycleGAN 测试配置
+# 基于 base.yaml，添加测试特有参数
+
+# 继承基础配置（需要在代码中处理）
+_base_: "base.yaml"
+
+# ========== 测试特有参数 ==========
+dataroot: "data/cezanne2photo"
+
+# 检查点路径
+checkpoints_dir: "checkpoints"
+checkpoint_epoch: 200
+
+# 输出设置
+output_dir: "output"
+save_format: "png"

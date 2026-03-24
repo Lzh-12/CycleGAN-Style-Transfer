@@ -1,0 +1,10 @@
+# DiscoGAN 训练配置
+# 基于 base.yaml
+
+# 继承基础配置
+_base_: "base.yaml"
+
+# 可以在这里覆盖基础配置
+# 例如：
+# n_epochs: 300
+# batch_size: 2

@@ -1,0 +1,31 @@
+# 基础配置文件
+# 所有训练和测试配置的基础
+
+# 数据集配置
+dataroot: ../../data
+dataset_name: edges2shoes
+img_size: 128
+channels: 3
+
+# 训练配置
+n_epochs: 205
+batch_size: 1
+lr: 0.0002
+b1: 0.5
+b2: 0.999
+n_cpu: 8
+
+# 模型配置
+n_critic: 5
+
+# 采样和检查点配置
+sample_interval: 200
+checkpoint_interval: 20
+
+# 损失权重
+lambda_adv: 1.0
+lambda_cycle: 10.0
+lambda_gp: 10.0
+
+# 设备配置
+cuda: true

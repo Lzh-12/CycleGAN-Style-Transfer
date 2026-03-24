@@ -1,0 +1,22 @@
+# DiscoGAN 基础配置
+
+# 数据集配置
+dataset_name: "edges2shoes"
+img_height: 64
+img_width: 64
+channels: 3
+
+# 训练配置
+epoch: 0                     # 从第几个 epoch 开始训练（0 表示从头开始）
+n_epochs: 200                # 总训练 epoch 数
+batch_size: 1                # batch 大小
+n_cpu: 8                     # CPU 线程数
+
+# 优化器与学习率
+lr: 0.0002                   # Adam 学习率
+b1: 0.5                      # Adam beta1
+b2: 0.999                    # Adam beta2
+
+# 日志与保存
+sample_interval: 100         # 每隔多少 batch 保存一次生成样本
+checkpoint_interval: 20      # 每隔多少 epoch 保存一次模型（-1 表示不保存）

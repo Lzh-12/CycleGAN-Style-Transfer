@@ -1,0 +1,25 @@
+# DiscoGAN 测试配置
+# 继承基础配置
+
+# 继承基础配置
+_base_: "base.yaml"
+
+# 数据集配置
+dataroot: "data"    # 数据集根目录
+
+# 模型配置
+input_nc: 3                      # 输入通道数
+output_nc: 3                     # 输出通道数
+size: 256                        # 数据大小（假设为正方形）
+
+# 测试配置
+batch_size: 1                    # batch大小
+cuda: true                      # 是否使用GPU
+
+# 模型路径
+generator_A2B: "checkpoints/discogan/G_AB_200.pth"  # A2B生成器路径
+generator_B2A: "checkpoints/discogan/G_BA_200.pth"  # B2A生成器路径
+
+# 输出配置
+output_dir: "output"             # 输出目录
+model_name: "discogan"           # 模型名称
