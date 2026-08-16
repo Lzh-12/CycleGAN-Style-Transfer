@@ -156,9 +156,13 @@ tensorboard --logdir experiments/horse2zebra/baseline/logs
 
 2. Woo, S., Park, J., Lee, J. Y., & Kweon, I. S. (2018). Cbam: Convolutional block attention module. In Proceedings of the European conference on computer vision (ECCV) (pp. 3-19).
 
+## 开源协议
+
+本项目采用 [MIT 协议](LICENSE) 开源，允许自由使用、修改、分发及商用，但需保留原始版权声明。
+
 ## 联系方式
 
-- 作者: Lzh
+- 作者: Aaron111
 - 邮箱: li20922024@163.com
 
 ---
